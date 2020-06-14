@@ -1,0 +1,123 @@
+/**
+ *
+ * Reset Style - Base
+ *
+ * @author Takuto Yanagida
+ * @version 2020-06-15
+ *
+ */
+
+
+@mixin form {
+	legend {
+		padding  : 0;
+		display  : table;  // Correct the text wrapping in Edge
+		max-width: 100%;   // Correct the text wrapping in Edge
+	}
+
+	fieldset {
+		margin : 0;
+		padding: 0;
+		border : 0;
+	}
+
+	select {
+		border: 1px solid WindowFrame;
+		border-radius: 0;
+
+		color: inherit;
+
+		text-transform: none;
+		appearance    : none;
+	}
+
+	optgroup {
+		font-weight: normal;
+		font-style : normal;  // for Firefox
+	}
+
+	option {
+		padding: 0;
+	}
+
+	textarea {
+		margin : 0;
+		padding: 0;
+
+		border: 1px solid WindowFrame;
+		border-radius: 0;
+
+		color : inherit;
+		resize: vertical;
+	}
+
+	progress {
+		display       : inline-block;  // Add the correct display in Edge
+		vertical-align: baseline;      // Add the correct vertical alignment in Chrome, Edge, and Firefox.
+	}
+
+	// ----
+
+	button {
+		text-transform: none;  // Remove the inheritance of text transform in Firefox.
+	}
+
+	input {
+		margin: 0;  // for Checkboxes and radio buttons
+	}
+
+	button, input {
+		padding: 0;
+
+		border: 1px solid WindowFrame;
+		border-radius: 0;
+
+		color : inherit;
+		overflow: visible;  // Show the overflow in Edge and IE
+	}
+
+	button,
+	[type="button"],
+	[type="reset"],
+	[type="submit"],
+	[role="button"] {
+		cursor: pointer;  // Apply cursor pointer to button elements
+	}
+
+	button,
+	[type='button'],
+	[type='reset'],
+	[type='submit'] {
+		appearance: button;  //  Correct the inability to style buttons in iOS and Safari
+
+		&::-moz-focus-inner {
+			// Remove the inner border and padding of focus outlines in Firefox
+			border-style: none;
+			padding     : 0;
+		}
+		&:-moz-focusring {
+			// Restore the focus outline styles unset by the previous rule in Firefox
+			outline: 1px dotted ButtonText;
+		}
+	}
+
+	[type='search'] {
+		appearance: textfield;  // Correct the odd appearance in Safari on iOS
+		outline-offset: -2px;  // Correct the outline style in Safari
+
+		&::-webkit-search-decoration {
+			appearance: none;  // Remove the inner padding in Chrome and Safari on macOS
+		}
+	}
+
+	// ----
+
+	::-webkit-file-upload-button {
+		appearance: button;   // Correct the inability to style clickable types in iOS and Safari
+		font      : inherit;  // Change font properties to `inherit` in Chrome and Safari
+	}
+
+	[disabled] {
+		cursor: default;  // Replace pointer cursor in disabled elements
+	}
+}

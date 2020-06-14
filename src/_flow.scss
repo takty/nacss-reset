@@ -1,0 +1,75 @@
+/**
+ *
+ * Reset Style - Flow
+ *
+ * @author Takuto Yanagida
+ * @version 2020-06-15
+ *
+ */
+
+
+@mixin flow {
+	p, figure {
+		margin: 0;
+	}
+
+	blockquote {
+		margin : 0;
+		padding: 0;
+	}
+
+	hr {
+		margin: 0;
+		border: 0;
+	}
+
+	pre {
+		margin     : 0;
+		white-space: pre-wrap;
+	}
+
+	// ----
+
+	h1, h2, h3, h4, h5, h6 {
+		margin: 0;
+
+		font-size  : 100%;
+		font-weight: normal;
+	}
+
+	// ----
+
+	ul, ol {
+		margin : 0;
+		padding: 0;
+		list-style: none;
+	}
+
+	dd, dl {
+		margin: 0;
+	}
+
+	// ----
+
+	table {
+		border-collapse: collapse;
+		border-spacing : 0;
+	}
+
+	td, th {
+		padding: 0;
+		text-align: left;
+	}
+
+	table, thead, tbody, tfoot, tr {
+		border: 0;
+	}
+
+	// ----
+
+	dialog {
+		margin : 0;
+		padding: 0;
+		border : 0;
+	}
+}
