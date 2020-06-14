@@ -8,16 +8,6 @@ const $ = require('gulp-load-plugins')({ pattern: ['gulp-*'] });
 $.sass.compiler = require('sass');
 
 
-gulp.task('js', () => gulp.src('src/**/*.js')
-	.pipe($.plumber())
-	.pipe($.sourcemaps.init())
-	.pipe($.babel())
-	.pipe($.terser())
-	.pipe($.rename({ extname: '.min.js' }))
-	.pipe($.sourcemaps.write('.'))
-	.pipe(gulp.dest('./dist'))
-);
-
 gulp.task('sass', () => gulp.src(['src/**/*.scss'])
 	.pipe($.plumber({
 		errorHandler: function (err) {
@@ -34,10 +24,9 @@ gulp.task('sass', () => gulp.src(['src/**/*.scss'])
 );
 
 gulp.task('watch', () => {
-	gulp.watch('src/**/*.js', gulp.series('js'));
 	gulp.watch('src/**/*.scss', gulp.series('sass'));
 });
 
-gulp.task('build', gulp.parallel('js', 'sass'));
+gulp.task('build', gulp.parallel('sass'));
 
 gulp.task('default', gulp.series('build', 'watch'));
