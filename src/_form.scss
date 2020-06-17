@@ -3,16 +3,14 @@
  * Reset Style - Base
  *
  * @author Takuto Yanagida
- * @version 2020-06-15
+ * @version 2020-06-17
  *
  */
 
 
 @mixin form {
 	legend {
-		padding  : 0;
-		display  : table;  // Correct the text wrapping in Edge
-		max-width: 100%;   // Correct the text wrapping in Edge
+		padding: 0;
 	}
 
 	fieldset {
@@ -24,7 +22,6 @@
 	select {
 		border: 1px solid WindowFrame;
 		border-radius: 0;
-
 		color: inherit;
 
 		text-transform: none;
@@ -46,14 +43,14 @@
 
 		border: 1px solid WindowFrame;
 		border-radius: 0;
+		color: inherit;
 
-		color : inherit;
 		resize: vertical;
 	}
 
+	meter,
 	progress {
-		display       : inline-block;  // Add the correct display in Edge
-		vertical-align: baseline;      // Add the correct vertical alignment in Chrome, Edge, and Firefox.
+		vertical-align: baseline;  // Add the correct vertical alignment in Chrome, Edge, & Firefox.
 	}
 
 	// ----
@@ -63,7 +60,7 @@
 	}
 
 	input {
-		margin: 0;  // for Checkboxes and radio buttons
+		margin: 0;  // for Checkboxes & radio buttons
 	}
 
 	button, input {
@@ -71,9 +68,7 @@
 
 		border: 1px solid WindowFrame;
 		border-radius: 0;
-
-		color : inherit;
-		overflow: visible;  // Show the overflow in Edge and IE
+		color: inherit;
 	}
 
 	button,
@@ -88,10 +83,10 @@
 	[type='button'],
 	[type='reset'],
 	[type='submit'] {
-		appearance: button;  //  Correct the inability to style buttons in iOS and Safari
+		appearance: button;  // Correct the style buttons in Safari on iOS
 
 		&::-moz-focus-inner {
-			// Remove the inner border and padding of focus outlines in Firefox
+			// Remove the inner border & padding of focus outlines in Firefox
 			border-style: none;
 			padding     : 0;
 		}
@@ -102,20 +97,32 @@
 	}
 
 	[type='search'] {
-		appearance: textfield;  // Correct the odd appearance in Safari on iOS
-		outline-offset: -2px;  // Correct the outline style in Safari
+		appearance: textfield;  // Correct the odd appearance in Safari on MacOS/iOS
+		outline-offset: -2px;  // Correct the outline style in Safari on MacOS
+	}
 
-		&::-webkit-search-decoration {
-			appearance: none;  // Remove the inner padding in Chrome and Safari on macOS
-		}
+	input[type='search']::-webkit-search-decoration {  // Specificity is important!
+		appearance: none;  // Remove the left padding in Safari on macOS
+	}
+
+	input[type='file']::-webkit-file-upload-button {  // Specificity is important!
+		appearance: none;  // for Chrome & Safari on MacOS/iOS
+		font      : inherit;
+
+		padding: 0;
+
+		border: 1px solid WindowFrame;
+		border-radius: 0;
+		color: inherit;
+	}
+
+	input[type="month"],
+	input[type="date"],
+	input[type="datetime-local"] {
+		appearance: none;  // for Safari on iOS
 	}
 
 	// ----
-
-	::-webkit-file-upload-button {
-		appearance: button;   // Correct the inability to style clickable types in iOS and Safari
-		font      : inherit;  // Change font properties to `inherit` in Chrome and Safari
-	}
 
 	[disabled] {
 		cursor: default;  // Replace pointer cursor in disabled elements
