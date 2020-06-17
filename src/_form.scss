@@ -37,14 +37,14 @@
 	}
 
 	textarea {
+		resize: vertical;
+
 		margin : 0;
 		padding: 0;
 
 		border: 1px solid WindowFrame;
 		border-radius: 0;
 		color: inherit;
-
-		resize: vertical;
 	}
 
 	meter,
@@ -64,17 +64,17 @@
 	}
 
 	button,
-	[type="button"],
-	[type="reset"],
-	[type="submit"],
-	[role="button"] {
+	[type="button" i],
+	[type="reset" i],
+	[type="submit" i],
+	[role="button" i] {
 		cursor: pointer;  // Apply cursor pointer to button elements
 	}
 
 	button,
-	[type="button"],
-	[type="reset"],
-	[type="submit"] {
+	[type="button" i],
+	[type="reset" i],
+	[type="submit" i] {
 		appearance: button;  // Correct the style buttons in Safari on iOS
 
 		&::-moz-focus-inner {
@@ -88,16 +88,16 @@
 		}
 	}
 
-	[type="search"] {
+	[type="search" i] {
 		appearance: textfield;  // Correct the odd appearance in Safari on MacOS/iOS
 		outline-offset: -2px;  // Correct the outline style in Safari on MacOS
 	}
 
-	input[type="search"]::-webkit-search-decoration {  // Specificity is important!
+	input[type="search" i]::-webkit-search-decoration {  // Specificity is important!
 		appearance: none;  // Remove the left padding in Safari on macOS
 	}
 
-	input[type="file"]::-webkit-file-upload-button {  // Specificity is important!
+	input[type="file" i]::-webkit-file-upload-button {  // Specificity is important!
 		appearance: none;  // for Chrome & Safari on MacOS/iOS
 		font      : inherit;
 
@@ -108,9 +108,9 @@
 		color: inherit;
 	}
 
-	input[type="month"],
-	input[type="date"],
-	input[type="datetime-local"] {
+	input[type="month" i],
+	input[type="date" i],
+	input[type="datetime-local" i] {
 		appearance: none;  // for Safari on iOS
 	}
 
