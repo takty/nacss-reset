@@ -3,16 +3,12 @@
  * Reset Style - Base
  *
  * @author Takuto Yanagida
- * @version 2020-06-17
+ * @version 2020-06-18
  *
  */
 
 
 @mixin form {
-	legend {
-		padding: 0;
-	}
-
 	fieldset {
 		margin : 0;
 		padding: 0;
@@ -20,12 +16,14 @@
 	}
 
 	select {
+		appearance: none;
+
+		margin : 0;  // for Safari on iOS
+		padding: 0;  // for Safari on iOS
+
 		border: 1px solid WindowFrame;
 		border-radius: 0;
 		color: inherit;
-
-		text-transform: none;
-		appearance    : none;
 	}
 
 	optgroup {
@@ -33,7 +31,8 @@
 		font-style : normal;  // for Firefox
 	}
 
-	option {
+	option,
+	legend {
 		padding: 0;
 	}
 
@@ -55,15 +54,8 @@
 
 	// ----
 
-	button {
-		text-transform: none;  // Remove the inheritance of text transform in Firefox.
-	}
-
-	input {
-		margin: 0;  // for Checkboxes & radio buttons
-	}
-
 	button, input {
+		margin : 0;  // for Checkboxes & radio buttons in all, and buttons in Safari on iOS
 		padding: 0;
 
 		border: 1px solid WindowFrame;
@@ -80,9 +72,9 @@
 	}
 
 	button,
-	[type='button'],
-	[type='reset'],
-	[type='submit'] {
+	[type="button"],
+	[type="reset"],
+	[type="submit"] {
 		appearance: button;  // Correct the style buttons in Safari on iOS
 
 		&::-moz-focus-inner {
@@ -96,16 +88,16 @@
 		}
 	}
 
-	[type='search'] {
+	[type="search"] {
 		appearance: textfield;  // Correct the odd appearance in Safari on MacOS/iOS
 		outline-offset: -2px;  // Correct the outline style in Safari on MacOS
 	}
 
-	input[type='search']::-webkit-search-decoration {  // Specificity is important!
+	input[type="search"]::-webkit-search-decoration {  // Specificity is important!
 		appearance: none;  // Remove the left padding in Safari on macOS
 	}
 
-	input[type='file']::-webkit-file-upload-button {  // Specificity is important!
+	input[type="file"]::-webkit-file-upload-button {  // Specificity is important!
 		appearance: none;  // for Chrome & Safari on MacOS/iOS
 		font      : inherit;
 
