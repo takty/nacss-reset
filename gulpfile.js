@@ -21,6 +21,7 @@ gulp.task('sass', () => gulp.src(['src/**/*.scss'])
 	.pipe($.rename({ extname: '.min.css' }))
 	.pipe($.sourcemaps.write('.'))
 	.pipe(gulp.dest('./dist'))
+	.pipe(gulp.dest('./docs'))
 );
 
 gulp.task('watch', () => {
