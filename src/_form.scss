@@ -102,7 +102,7 @@
 	}
 
 	input[type="file" i]::-webkit-file-upload-button {  // Specificity is important!
-		appearance: none;  // for Chrome & Safari on MacOS/iOS
+		appearance: button;  // for Chrome & Safari on MacOS/iOS
 		font      : inherit;
 
 		padding: 0;
