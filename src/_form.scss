@@ -86,6 +86,12 @@
 		}
 	}
 
+	[type="date" i],
+	[type="month" i],
+	[type="datetime-local" i] {
+		appearance: none;  // for Safari on iOS
+	}
+
 	[type="search" i] {
 		appearance: textfield;  // Correct the odd appearance in Safari on MacOS/iOS
 		outline-offset: -2px;  // Correct the outline style in Safari on MacOS
@@ -104,12 +110,6 @@
 		border: 1px solid WindowFrame;
 		border-radius: 0;
 		color: inherit;
-	}
-
-	input[type="month" i],
-	input[type="date" i],
-	input[type="datetime-local" i] {
-		appearance: none;  // for Safari on iOS
 	}
 
 	// ----
