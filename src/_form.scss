@@ -10,15 +10,15 @@
 
 @mixin form {
 	fieldset {
-		margin : 0;
+		margin: 0;
 		padding: 0;
-		border : 0;
+		border: 0;
 	}
 
 	select {
 		appearance: none;
 
-		margin : 0;  // for Safari on iOS
+		margin: 0;  // for Safari on iOS
 		padding: 0;  // for Safari on iOS
 
 		border: 1px solid WindowFrame;
@@ -28,7 +28,7 @@
 
 	optgroup {
 		font-weight: normal;
-		font-style : normal;  // for Firefox
+		font-style: normal;  // for Firefox
 	}
 
 	option, legend {
@@ -38,7 +38,7 @@
 	textarea {
 		resize: vertical;
 
-		margin : 0;
+		margin: 0;
 		padding: 0;
 
 		border: 1px solid WindowFrame;
@@ -53,7 +53,7 @@
 	// ----
 
 	button, input {
-		margin : 0;  // for Checkboxes & radio buttons in all, and buttons in Safari on iOS
+		margin: 0;  // for Checkboxes & radio buttons in all, and buttons in Safari on iOS
 		padding: 0;
 
 		border: 1px solid WindowFrame;
@@ -77,8 +77,8 @@
 
 		&::-moz-focus-inner {
 			// Remove the inner border & padding of focus outlines in Firefox
+			padding: 0;
 			border-style: none;
-			padding     : 0;
 		}
 		&:-moz-focusring {
 			// Restore the focus outline styles unset by the previous rule in Firefox
@@ -103,7 +103,7 @@
 
 	input[type="file" i]::-webkit-file-upload-button {  // Specificity is important!
 		appearance: button;  // for Chrome & Safari on MacOS/iOS
-		font      : inherit;
+		font: inherit;
 
 		padding: 0;
 
