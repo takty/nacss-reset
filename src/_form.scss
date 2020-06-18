@@ -47,7 +47,7 @@
 	}
 
 	meter, progress {
-		vertical-align: baseline;  // Add the correct vertical alignment in Chrome, Edge, & Firefox.
+		vertical-align: baseline;  // for Chrome, Edge, and Firefox.
 	}
 
 	// ----
@@ -66,7 +66,7 @@
 	[type="reset" i],
 	[type="submit" i],
 	[role="button" i] {
-		cursor: pointer;  // Apply cursor pointer to button elements
+		cursor: pointer;
 	}
 
 	button,
@@ -93,8 +93,8 @@
 	}
 
 	[type="search" i] {
-		appearance: textfield;  // Correct the odd appearance in Safari on MacOS/iOS
-		outline-offset: -2px;  // Correct the outline style in Safari on MacOS
+		appearance: textfield;  // for Safari on MacOS/iOS
+		outline-offset: -2px;  // for Safari on MacOS
 	}
 
 	input[type="search" i]::-webkit-search-decoration {  // Specificity is important!
@@ -115,6 +115,6 @@
 	// ----
 
 	[disabled] {
-		cursor: default;  // Replace pointer cursor in disabled elements
+		cursor: default;
 	}
 }
