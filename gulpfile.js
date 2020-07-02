@@ -5,7 +5,6 @@ const SASS_OUTPUT_STYLE = 'compressed';  // 'expanded' or 'compressed'
 
 const gulp = require('gulp');
 const $ = require('gulp-load-plugins')({ pattern: ['gulp-*'] });
-$.sass.compiler = require('sass');
 
 
 gulp.task('sass', () => gulp.src(['src/**/*.scss'])
@@ -16,7 +15,7 @@ gulp.task('sass', () => gulp.src(['src/**/*.scss'])
 		}
 	}))
 	.pipe($.sourcemaps.init())
-	.pipe($.sass({ outputStyle: SASS_OUTPUT_STYLE }))
+	.pipe($.dartSass({ outputStyle: SASS_OUTPUT_STYLE }))
 	.pipe($.autoprefixer({ remove: false }))
 	.pipe($.rename({ extname: '.min.css' }))
 	.pipe($.sourcemaps.write('.'))
