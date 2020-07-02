@@ -1,6 +1,6 @@
 {
 	"name": "nacss-reset",
-	"version": "0.20.6",
+	"version": "0.20.7",
 	"description": "A Reset Style Sheet",
 	"author": "Takuto Yanagida",
 	"main": "gulpfile.js",
