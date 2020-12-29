@@ -14,7 +14,7 @@ const plumberOptions = {
 };
 
 
-gulp.task('sass', () => gulp.src(['src/**/*.scss'])
+gulp.task('sass', () => gulp.src(['src/sass/**/*.scss'])
 	.pipe($.plumber(plumberOptions))
 	.pipe($.sourcemaps.init())
 	.pipe($.dartSass({ outputStyle: SASS_OUTPUT_STYLE }))
@@ -26,7 +26,7 @@ gulp.task('sass', () => gulp.src(['src/**/*.scss'])
 );
 
 gulp.task('watch', () => {
-	gulp.watch('src/**/*.scss', gulp.series('sass'));
+	gulp.watch('src/sass/**/*.scss', gulp.series('sass'));
 });
 
 gulp.task('build', gulp.parallel('sass'));
