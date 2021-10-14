@@ -19,13 +19,6 @@ const { makeTimestampTask } = require('./task-timestamp');
 // -----------------------------------------------------------------------------
 
 
-const plumberOptions = {
-	errorHandler: function (err) {
-		console.log(err.messageFormatted);
-		this.emit('end');
-	}
-};
-
 const sass = makeSassTask('./src/sass/[^_]*.scss', './dist/css', './src/sass');
 
 const watch = (done) => {
