@@ -1,9 +1,9 @@
 /**
  *
- * Reset Style - Base
+ * Base
  *
  * @author Takuto Yanagida
- * @version 2020-06-18
+ * @version 2021-11-17
  *
  */
 
@@ -50,7 +50,9 @@
 		vertical-align: baseline;  // for Chrome, Edge, and Firefox.
 	}
 
-	// ----
+
+	// -------------------------------------------------------------------------
+
 
 	button, input {
 		margin: 0;  // for Checkboxes & radio buttons in all, and buttons in Safari on iOS
@@ -112,7 +114,9 @@
 		color: inherit;
 	}
 
-	// ----
+
+	// -------------------------------------------------------------------------
+
 
 	[disabled] {
 		cursor: default;
