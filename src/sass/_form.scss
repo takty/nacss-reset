@@ -3,7 +3,7 @@
  * Base
  *
  * @author Takuto Yanagida
- * @version 2021-11-17
+ * @version 2021-11-25
  *
  */
 
@@ -71,10 +71,12 @@
 		cursor: pointer;
 	}
 
-	button,
-	[type="button" i],
-	[type="reset" i],
-	[type="submit" i] {
+	:is(
+		button,
+		[type="button" i],
+		[type="reset" i],
+		[type="submit" i]
+	) {
 		appearance: button;  // Correct the style buttons in Safari on iOS
 
 		&::-moz-focus-inner {
