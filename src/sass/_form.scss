@@ -8,45 +8,47 @@
  */
 
 
+%button-like {
+	border: 1px solid WindowFrame;
+	border-radius: 0;
+	color: inherit;
+}
+
 @mixin form {
-	fieldset {
+	:where(fieldset) {
 		margin: 0;
 		padding: 0;
 		border: 0;
 	}
 
-	select {
+	:where(select) {
 		appearance: none;
 
 		margin: 0;  // for Safari on iOS
 		padding: 0;  // for Safari on iOS
 
-		border: 1px solid WindowFrame;
-		border-radius: 0;
-		color: inherit;
+		@extend %button-like;
 	}
 
-	optgroup {
+	:where(optgroup) {
 		font-weight: normal;
 		font-style: normal;  // for Firefox
 	}
 
-	option, legend {
+	:where(option, legend) {
 		padding: 0;
 	}
 
-	textarea {
+	:where(textarea) {
 		resize: vertical;
 
 		margin: 0;
 		padding: 0;
 
-		border: 1px solid WindowFrame;
-		border-radius: 0;
-		color: inherit;
+		@extend %button-like;
 	}
 
-	meter, progress {
+	:where(meter, progress) {
 		vertical-align: baseline;  // for Chrome, Edge, and Firefox.
 	}
 
@@ -54,24 +56,24 @@
 	// -------------------------------------------------------------------------
 
 
-	button, input {
+	:where(button, input) {
 		margin: 0;  // for Checkboxes & radio buttons in all, and buttons in Safari on iOS
 		padding: 0;
 
-		border: 1px solid WindowFrame;
-		border-radius: 0;
-		color: inherit;
+		@extend %button-like;
 	}
 
-	button,
-	[type="button" i],
-	[type="reset" i],
-	[type="submit" i],
-	[role="button" i] {
+	:where(
+		button,
+		[type="button" i],
+		[type="reset" i],
+		[type="submit" i],
+		[role="button" i]
+	) {
 		cursor: pointer;
 	}
 
-	:is(
+	:where(
 		button,
 		[type="button" i],
 		[type="reset" i],
@@ -80,37 +82,39 @@
 		appearance: button;  // Correct the style buttons in Safari on iOS
 	}
 
-	[type="date" i],
-	[type="month" i],
-	[type="datetime-local" i] {
+	:where([type="submit" i]) {
+		font-weight: inherit;  // Correct the style buttons in Safari on iOS
+	}
+
+	:where(
+		[type="date" i],
+		[type="week" i],
+		[type="month" i],
+		[type="datetime-local" i]
+	) {
 		appearance: none;  // for Safari on iOS
 	}
 
-	[type="search" i] {
-		appearance: textfield;  // for Safari on MacOS/iOS
-		outline-offset: -2px;  // for Safari on MacOS
+	:where([type="search" i]) {
+		appearance: textfield;  // for Safari on macOS/iOS
+		@supports (not (-webkit-touch-callout: none)) and (font: -apple-system-body) {
+			outline-offset: -2px;  // for Safari on macOS only
+		}
 	}
 
-	input[type="search" i]::-webkit-search-decoration {  // Specificity is important!
-		appearance: none;  // Remove the left padding in Safari on macOS
-	}
-
-	input[type="file" i]::-webkit-file-upload-button {  // Specificity is important!
-		appearance: button;  // for Chrome & Safari on MacOS/iOS
+	::file-selector-button {
+		appearance: button;
 		font: inherit;
 
 		padding: 0;
-
-		border: 1px solid WindowFrame;
-		border-radius: 0;
-		color: inherit;
+		@extend %button-like;
 	}
 
 
 	// -------------------------------------------------------------------------
 
 
-	[disabled] {
+	:where([disabled]) {
 		cursor: default;
 	}
 }

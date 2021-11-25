@@ -3,22 +3,22 @@
  * Embedded
  *
  * @author Takuto Yanagida
- * @version 2020-06-18
+ * @version 2021-11-25
  *
  */
 
 
 @mixin embedded {
-	img, svg, video, canvas, iframe, embed, object, audio {
+	:where(img, svg, video, canvas, iframe, embed, object, audio) {
 		max-width: 100%;
 		vertical-align: middle;
 	}
 
-	img, svg, video, canvas {
+	:where(img, svg, video, canvas) {
 		height: auto;
 	}
 
-	iframe {
+	:where(iframe) {
 		border: 0;
 	}
 }

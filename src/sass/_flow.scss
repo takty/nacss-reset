@@ -3,27 +3,27 @@
  * Flow
  *
  * @author Takuto Yanagida
- * @version 2021-11-17
+ * @version 2021-11-25
  *
  */
 
 
 @mixin flow {
-	p, figure {
+	:where(p, figure) {
 		margin: 0;
 	}
 
-	blockquote {
+	:where(blockquote) {
 		margin: 0;
 		padding: 0;
 	}
 
-	hr {
+	:where(hr) {
 		margin: 0;
 		border: 0;
 	}
 
-	pre {
+	:where(pre) {
 		margin: 0;
 		white-space: pre-wrap;
 	}
@@ -32,7 +32,7 @@
 	// -------------------------------------------------------------------------
 
 
-	h1, h2, h3, h4, h5, h6 {
+	:where(h1, h2, h3, h4, h5, h6) {
 		margin: 0;
 	}
 
@@ -40,13 +40,13 @@
 	// -------------------------------------------------------------------------
 
 
-	ul, ol {
+	:where(ul, ol) {
 		margin: 0;
 		padding: 0;
 		list-style: none;
 	}
 
-	dd, dl {
+	:where(dd, dl) {
 		margin: 0;
 	}
 
@@ -54,17 +54,17 @@
 	// -------------------------------------------------------------------------
 
 
-	table {
+	:where(table) {
 		border-collapse: collapse;
 		border-spacing: 0;
 	}
 
-	td, th {
+	:where(td, th) {
 		padding: 0;
 		text-align: left;
 	}
 
-	table, thead, tbody, tfoot, tr {
+	:where(table, thead, tbody, tfoot, tr) {
 		border: 0;
 	}
 
@@ -72,7 +72,7 @@
 	// -------------------------------------------------------------------------
 
 
-	dialog {
+	:where(dialog) {
 		margin: 0;
 		padding: 0;
 		border: 0;
