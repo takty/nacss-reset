@@ -1,6 +1,6 @@
 /**
  *
- * Base
+ * Form
  *
  * @author Takuto Yanagida
  * @version 2021-11-25
@@ -78,16 +78,6 @@
 		[type="submit" i]
 	) {
 		appearance: button;  // Correct the style buttons in Safari on iOS
-
-		&::-moz-focus-inner {
-			// Remove the inner border & padding of focus outlines in Firefox
-			padding: 0;
-			border-style: none;
-		}
-		&:-moz-focusring {
-			// Restore the focus outline styles unset by the previous rule in Firefox
-			outline: 1px dotted ButtonText;
-		}
 	}
 
 	[type="date" i],
