@@ -3,7 +3,7 @@
  * Reset
  *
  * @author Takuto Yanagida
- * @version 2020-06-18
+ * @version 2021-11-25
  *
  * References:
  *  A Modern CSS Reset
@@ -32,11 +32,20 @@
 @use 'flow' as *;
 @use 'embedded' as *;
 @use 'form' as *;
+@use 'accessibility' as *;
 
 @include global;
 @include flow;
 @include embedded;
 @include form;
+
+@include reduced-motion;
+[visually-hidden] {
+	@include visually-hidden;
+}
+[visually-hidden-focusable] {
+	@include visually-hidden-focusable;
+}
 
 
 /*
