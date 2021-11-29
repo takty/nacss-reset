@@ -3,14 +3,14 @@
  * Global
  *
  * @author Takuto Yanagida
- * @version 2021-11-25
+ * @version 2021-11-29
  *
  */
 
 
 @mixin global {
 	* {
-		font-size: inherit;
+		font-size  : inherit;
 		font-family: inherit;
 		line-height: inherit;
 	}
@@ -18,17 +18,17 @@
 	*,
 	::before,
 	::after {
-		box-sizing: border-box;
+		box-sizing       : border-box;
 		background-repeat: no-repeat;
 	}
 
 	:where(html) {
-		scroll-behavior: smooth;
+		scroll-behavior : smooth;
 		text-size-adjust: 100%;
-		overflow-wrap: break-word;
+		overflow-wrap   : break-word;
 
 		line-height: 1.15;
-		tab-size: 4;
+		tab-size   : 4;
 	}
 
 	:where(body) {

@@ -3,7 +3,7 @@
  * Flow
  *
  * @author Takuto Yanagida
- * @version 2021-11-25
+ * @version 2021-11-29
  *
  */
 
@@ -14,7 +14,7 @@
 	}
 
 	:where(blockquote) {
-		margin: 0;
+		margin : 0;
 		padding: 0;
 	}
 
@@ -24,7 +24,7 @@
 	}
 
 	:where(pre) {
-		margin: 0;
+		margin     : 0;
 		white-space: pre-wrap;
 	}
 
@@ -41,8 +41,8 @@
 
 
 	:where(ul, ol) {
-		margin: 0;
-		padding: 0;
+		margin    : 0;
+		padding   : 0;
 		list-style: none;
 	}
 
@@ -56,11 +56,11 @@
 
 	:where(table) {
 		border-collapse: collapse;
-		border-spacing: 0;
+		border-spacing : 0;
 	}
 
 	:where(td, th) {
-		padding: 0;
+		padding   : 0;
 		text-align: left;
 	}
 
@@ -73,8 +73,8 @@
 
 
 	:where(dialog) {
-		margin: 0;
+		margin : 0;
 		padding: 0;
-		border: 0;
+		border : 0;
 	}
 }

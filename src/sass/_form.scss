@@ -3,28 +3,28 @@
  * Form
  *
  * @author Takuto Yanagida
- * @version 2021-11-25
+ * @version 2021-11-29
  *
  */
 
 
 %button-like {
-	border: 1px solid WindowFrame;
+	border       : 1px solid WindowFrame;
 	border-radius: 0;
-	color: inherit;
+	color        : inherit;
 }
 
 @mixin form {
 	:where(fieldset) {
-		margin: 0;
+		margin : 0;
 		padding: 0;
-		border: 0;
+		border : 0;
 	}
 
 	:where(select) {
 		appearance: none;
 
-		margin: 0;  // for Safari on iOS
+		margin : 0;  // for Safari on iOS
 		padding: 0;  // for Safari on iOS
 
 		@extend %button-like;
@@ -32,7 +32,7 @@
 
 	:where(optgroup) {
 		font-weight: normal;
-		font-style: normal;  // for Firefox
+		font-style : normal;  // for Firefox
 	}
 
 	:where(option, legend) {
@@ -42,7 +42,7 @@
 	:where(textarea) {
 		resize: vertical;
 
-		margin: 0;
+		margin : 0;
 		padding: 0;
 
 		@extend %button-like;
@@ -57,7 +57,7 @@
 
 
 	:where(button, input) {
-		margin: 0;  // for Checkboxes & radio buttons in all, and buttons in Safari on iOS
+		margin : 0;  // for Checkboxes & radio buttons in all, and buttons in Safari on iOS
 		padding: 0;
 
 		@extend %button-like;
@@ -88,7 +88,7 @@
 
 	::file-selector-button {
 		appearance: button;
-		font: inherit;
+		font      : inherit;
 
 		padding: 0;
 		@extend %button-like;

@@ -3,14 +3,14 @@
  * Embedded
  *
  * @author Takuto Yanagida
- * @version 2021-11-25
+ * @version 2021-11-29
  *
  */
 
 
 @mixin embedded {
 	:where(img, svg, video, canvas, iframe, embed, object, audio) {
-		max-width: 100%;
+		max-width     : 100%;
 		vertical-align: middle;
 	}
 
