@@ -23,11 +23,13 @@
 	}
 
 	:where(html) {
+		--nc-reset-line-height: 1.15;
+
 		scroll-behavior : smooth;
 		text-size-adjust: 100%;
 		overflow-wrap   : break-word;
 
-		line-height: 1.15;
+		line-height: var(--nc-reset-line-height);
 		tab-size   : 4;
 	}
 
