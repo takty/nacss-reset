@@ -44,7 +44,7 @@
 		margin: 0;
 	}
 
-	:where(ul[class], ol[class], nav ul, nav ol) {
+	:where(ul[class], ol[class]) {
 		padding   : 0;
 		list-style: none;
 	}
