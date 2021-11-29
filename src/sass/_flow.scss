@@ -40,14 +40,13 @@
 	// -------------------------------------------------------------------------
 
 
-	:where(ul, ol) {
-		margin    : 0;
-		padding   : 0;
-		list-style: none;
+	:where(ul, ol, dd, dl) {
+		margin: 0;
 	}
 
-	:where(dd, dl) {
-		margin: 0;
+	:where(ul[class], ol[class], nav ul, nav ol) {
+		padding   : 0;
+		list-style: none;
 	}
 
 
@@ -61,7 +60,7 @@
 
 	:where(td, th) {
 		padding   : 0;
-		text-align: left;
+		text-align: start;
 	}
 
 	:where(table, thead, tbody, tfoot, tr) {
