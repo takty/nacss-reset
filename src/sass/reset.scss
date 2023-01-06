@@ -1,5 +1,4 @@
 /**
- *
  * Reset
  *
  * @author Takuto Yanagida
@@ -24,9 +23,7 @@
  *  http://necolas.github.io/normalize.css/
  *  My CSS
  *  https://github.com/ireade/css
- *
  */
-
 
 @use 'global' as *;
 @use 'flow' as *;
@@ -44,7 +41,6 @@
 [visually-hidden-focusable]:not(:focus):not(:focus-within) {
 	@include visually-hidden;
 }
-
 
 /*
 padding:

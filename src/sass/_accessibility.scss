@@ -1,5 +1,4 @@
 /**
- *
  * Accessibility
  *
  * @author Takuto Yanagida
@@ -12,9 +11,7 @@
  *  https://github.com/hankchizljaw/modern-css-reset
  *  Mixins of Bootstrap
  *  https://github.com/twbs/bootstrap/blob/main/scss/mixins/_visually-hidden.scss
- *
  */
-
 
 @mixin reduced-motion {
 	@media(prefers-reduced-motion: reduce) {

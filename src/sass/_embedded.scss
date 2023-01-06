@@ -1,12 +1,9 @@
 /**
- *
  * Embedded
  *
  * @author Takuto Yanagida
  * @version 2021-11-29
- *
  */
-
 
 @mixin embedded {
 	:where(img, svg, video, canvas, iframe, embed, object, audio) {
