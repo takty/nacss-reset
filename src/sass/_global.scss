@@ -2,7 +2,7 @@
  * Global
  *
  * @author Takuto Yanagida
- * @version 2023-09-08
+ * @version 2023-09-21
  */
 
 @mixin global {
@@ -17,6 +17,10 @@
 	::after {
 		box-sizing       : border-box;
 		background-repeat: no-repeat;
+	}
+
+	:focus-visible {
+		outline-color: #7bfc;
 	}
 
 	:where(html) {
@@ -43,5 +47,8 @@
 		margin: 0;
 
 		min-height: 100vh;
+		@supports (min-height: 1dvh) {
+			min-height: 100dvh;
+		}
 	}
 }
