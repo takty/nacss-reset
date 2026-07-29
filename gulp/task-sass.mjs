@@ -2,7 +2,7 @@
  * Function for gulp (SASS)
  *
  * @author Takuto Yanagida
- * @version 2023-11-08
+ * @version 2026-07-30
  */
 
 const SASS_OUTPUT_STYLE = 'compressed';  // 'expanded' or 'compressed'
@@ -27,7 +27,7 @@ const plumberOptions = {
 export function makeSassTask(src, dest = './dist', base = null, addSuffix = true) {
 	const sassTask = () => gulp.src(src, { base: base, sourcemaps: true })
 		.pipe(plumber(plumberOptions))
-		.pipe(sass.sync({ outputStyle: SASS_OUTPUT_STYLE }))
+		.pipe(sass.sync({ style: SASS_OUTPUT_STYLE }))
 		.pipe(autoprefixer({ remove: false }))
 		.pipe(rename({ extname: addSuffix ? '.min.css' : '.css' }))
 		.pipe(changed(dest, { hasChanged: compareContents }))
