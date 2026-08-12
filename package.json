@@ -5,9 +5,10 @@
 	"author": "Takuto Yanagida",
 	"main": "gulpfile.js",
 	"scripts": {
-		"postinstall": "gulp build",
-		"start": "gulp",
-		"docs": "gulp doc"
+		"postinstall": "node build.mjs",
+		"build": "node build.mjs",
+		"start": "node build.mjs --watch",
+		"docs": "node build.mjs --docs --watch"
 	},
 	"repository": {
 		"type": "git",
@@ -25,17 +26,8 @@
 		"not dead"
 	],
 	"dependencies": {
-		"gulp": "^5.0.1",
-		"gulp-autoprefixer": "^10.0.0",
-		"gulp-changed": "^5.0.4",
-		"gulp-plumber": "^1.2.1",
-		"gulp-rename": "^2.1.0",
-		"gulp-sass": "^6.0.1",
+		"autoprefixer": "^10.5.4",
+		"postcss": "^8.5.26",
 		"sass": "^1.102.0"
-	},
-	"devDependencies": {
-		"gulp-ignore": "^3.0.0",
-		"gulp-replace": "^1.1.4",
-		"luxon": "^3.7.2"
 	}
 }
