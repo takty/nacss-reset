@@ -8,7 +8,6 @@
 		"./css": "./dist/reset.min.css"
 	},
 	"scripts": {
-		"postinstall": "node build.mjs",
 		"build": "node build.mjs",
 		"start": "node build.mjs --watch",
 		"docs": "node build.mjs --docs --watch"
