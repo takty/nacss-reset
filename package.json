@@ -3,7 +3,10 @@
 	"version": "1.0.0",
 	"description": "A Reset Style Sheet",
 	"author": "Takuto Yanagida",
-	"main": "gulpfile.js",
+	"exports": {
+		".": "./dist/reset.min.css",
+		"./css": "./dist/reset.min.css"
+	},
 	"scripts": {
 		"postinstall": "node build.mjs",
 		"build": "node build.mjs",

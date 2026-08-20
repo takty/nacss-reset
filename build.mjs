@@ -9,7 +9,7 @@ import {
 } from './tasks.mjs';
 
 const SASS_SRC_DIR = './src/sass';
-const DIST_CSS_DIR = './dist/css';
+const DIST_CSS_DIR = './dist';
 const DOCS_DIR     = './docs';
 const DOCS_CSS_DIR = './docs/css';
 
