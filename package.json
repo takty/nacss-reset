@@ -28,8 +28,8 @@
 		"not dead"
 	],
 	"dependencies": {
-		"autoprefixer": "^10.6.1",
-		"postcss": "^8.5.28",
-		"sass": "^1.105.1"
+		"autoprefixer": "^10.6.2",
+		"postcss": "^8.5.32",
+		"sass": "^1.106.1"
 	}
 }
